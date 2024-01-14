@@ -12,9 +12,7 @@ pipeline {
     stage ('Testing stage') {
       steps {
         echo 'Testing the application...'
-        script {
-          cat start.txt end.txt | grep -q 'Hello world'
-        }
+        cat start.txt end.txt | grep -q 'Hello world'
         echo 'Application tested!'
       }
     }
